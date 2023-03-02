@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+  --color:blue;
+}
+
+body {
+  margin: 0;
+  background-image: url(./Maze_MainMenuBG.svg);
+  background-size: cover;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#title {
+  color:rgb(63, 65, 66);
+  margin: 0 auto;
+  margin-left: 42%;
+}
+
+#levelTitle {
+  margin: 0 auto;
+  margin-left: 42%;
+}
+
+#menu {
+  width: 85vmin;
+  height: 85vmin;
+  display: flex;
+  flex-direction: column;
+  background: url(./Title.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  justify-content: center;
+  position: relative;
+}
+#menu button {
+  margin-top: auto;
+  /* outline: transparent; */
+}
+
+/* .ReactModal__Overlay.ReactModal__Overlay--after-open {
+  inset: auto !important;
+  border: 10px !important;
+  position: absolute !important;
+  top: 40% !important;
+  left: 47% !important;
+} */
+
+.overlay-base {
+  border: 10px;
+  position: absolute;
+  top: 50%;  
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  width: 85vmin;
+  height: 85vmin;
+  background-color: rgba(0,0,0,.8);
+  color: #fff;
+}
+
+#scoreTitle {
+  font-size: 80%;
+}
+
+#scoreModal {
+  width: 85vmin;
+  height: 85vmin;
+  background-color: rgb(30, 29, 29);
+  backface-visibility: 80%;
+}
+
+/* #ReactModalPortal {
+  inset: auto !important;
+  border: 10px !important;
+  position: absolute !important;
+  top: 40% !important;
+  left: 47% !important;
+} */
+/* #scoreModalOverlay {
+  position: relative;
+} */
+
+#game-board {
+  width: 85vmin;
+  height: 85vmin;
+  display: grid;
+  grid-template-rows: repeat(21, 1fr);
+  grid-template-columns: repeat(21, 1fr);
+  color:aquamarine;
+  grid-gap: 1vmin;
+  border-radius: 5px;
+
+}
+
+.snake {
+  background-color: var(--color);
+  border: .25vmin solid black;
+  border-radius: 10%;
+}
+
+.food {
+  background-color: #ccc;
+  width: 100%;
+  /* border: .25vmin solid black; */
+  border-radius: 10%;
+}
+
+.wall {
+  background-color: brown;
+  border: .25vmin solid black;
+  border-radius: 10%;
+}
+
+.space {
+  background-color: #ccc;
+  border-radius: 10%;
+}
+
+#play {
+  width: 25%;
+  margin: 0 auto; 
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 1.5%;
+}
+
+#play:hover {
+  cursor: pointer;
+  stroke: brown;
+}
+
+#highScore {  
+  position: absolute;
+  left: 18%;
+  width: 20%;
+  bottom: 30%;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 1.5%;
+}
+
+#highScore:hover {
+  cursor: pointer;
+  stroke: brown;
+}
+
+#options {  
+  position: absolute;
+  right: 18%;
+  width: 20%;
+  bottom: 30%;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 1.5%;
+}
+
+#options:hover {
+  cursor: pointer;
+  stroke: brown;
+}
+
+#checkOut {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 85vmin;
+}

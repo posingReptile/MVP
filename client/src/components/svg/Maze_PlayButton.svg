@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 253.37 219.43">
+ <defs>
+  <style>
+    .cls-1{stroke-width:3px;}.cls-1,.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;}.cls-2{stroke-width:2px;}
+  </style>
+ </defs>
+ <g id="Layer_1-2">
+  <g id="Play_button">
+    <path class="cls-2" d="M166.32,117.98l-58.09,31.61c-3.13,1.7-7.01-.62-7.03-4.21l-.48-64.12c-.03-3.58,3.79-5.81,6.94-4.05l58.58,32.51c3.28,1.82,3.33,6.5,.09,8.26Z"/>
+    <polygon class="cls-1" points="189.16 1.5 64.21 1.5 1.73 109.71 64.21 217.93 189.16 217.93 251.64 109.71 189.16 1.5"/>
+  </g>
+ </g>
+</svg>

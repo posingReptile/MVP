@@ -1,0 +1,22 @@
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+import * as React from "react";
+var SvgHighscoreIcon = function SvgHighscoreIcon(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 209.58 181.5"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    style: {
+      fill: "none",
+      stroke: "#fff",
+      strokeMiterlimit: 10,
+      strokeWidth: 3
+    },
+    d: "M156.32 1.5H53.26L1.73 90.75 53.26 180h103.06l51.53-89.25L156.32 1.5z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M124.73 46.62v-.08H84.88v.04c-9.52.41-17.12 8.24-17.12 17.86s7.91 17.78 17.7 17.89c1.5 6.28 5.97 11.38 11.84 13.78 1.2 2.09 1.88 4.51 1.88 7.09 0 4.9-2.47 9.23-6.23 11.81v.07a2.967 2.967 0 0 0-2.49 2.92v2.06a2.967 2.967 0 0 0-2.49 2.92v9a2.97 2.97 0 0 0 2.97 2.97h27.68a2.97 2.97 0 0 0 2.97-2.97v-9c0-1.48-1.08-2.69-2.49-2.92V118c0-1.48-1.08-2.69-2.49-2.92v-.07c-3.76-2.58-6.23-6.91-6.23-11.81 0-2.57.69-4.98 1.87-7.07 5.88-2.39 10.36-7.49 11.88-13.76 9.78-.12 17.67-8.08 17.67-17.89s-7.58-17.43-17.09-17.86ZM84.88 77.27c-6.74-.4-12.09-5.98-12.09-12.83s5.35-12.42 12.09-12.83v25.66Zm39.85.04V51.66c6.72.42 12.05 5.99 12.05 12.83s-5.33 12.4-12.05 12.83Z",
+    style: {
+      fill: "#fff"
+    }
+  }));
+};
+export default SvgHighscoreIcon;
