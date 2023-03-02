@@ -18,7 +18,10 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-icons": "^4.7.1",
-    "react-modal": "^3.16.1"
+    "react-modal": "^3.16.1",
+    "react-particles": "^2.9.3",
+    "react-tsparticles": "^2.9.3",
+    "tsparticles": "^2.9.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

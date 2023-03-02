@@ -2,12 +2,21 @@
 
 :root {
   --color:blue;
+  --wallColor: brown;
 }
 
 body {
   margin: 0;
   background-image: url(./Maze_MainMenuBG.svg);
   background-size: cover;
+}
+
+svg {
+  fill: #fff;
+}
+
+h1 {
+  align-items: center;
 }
 
 #app {
@@ -31,7 +40,7 @@ body {
 
 #menu {
   width: 85vmin;
-  height: 85vmin;
+  height: 74vmin;
   display: flex;
   flex-direction: column;
   background: url(./Title.svg);
@@ -54,26 +63,45 @@ body {
 } */
 
 .overlay-base {
-  border: 10px;
   position: absolute;
+  border: transparent;
   top: 50%;  
   left: 50%; 
   transform: translate(-50%, -50%);
   width: 85vmin;
   height: 85vmin;
-  background-color: rgba(0,0,0,.8);
   color: #fff;
+  opacity: 0;
+  transition-property: background-color, opacity;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
 }
+.overlay-after {
+  border-radius: 10%;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 1;
+}
+.overlay-before {
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
 
+}
 #scoreTitle {
-  font-size: 80%;
+  margin: 0 auto;
+  margin-top: 15%;
+  color: white;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #scoreModal {
   width: 85vmin;
   height: 85vmin;
-  background-color: rgb(30, 29, 29);
-  backface-visibility: 80%;
+  background-color: rgb(0, 0, 0);
+  backface-visibility: 90%;
 }
 
 /* #ReactModalPortal {
@@ -103,6 +131,7 @@ body {
   background-color: var(--color);
   border: .25vmin solid black;
   border-radius: 10%;
+
 }
 
 .food {
@@ -113,14 +142,17 @@ body {
 }
 
 .wall {
-  background-color: brown;
+  background-color: var(--wallColor);
   border: .25vmin solid black;
   border-radius: 10%;
+  
 }
 
 .space {
   background-color: #ccc;
   border-radius: 10%;
+  /* background-color: rgb(30, 29, 29); */
+  backface-visibility: 80%;
 }
 
 #play {
@@ -128,6 +160,7 @@ body {
   margin: 0 auto; 
   fill: none;
   stroke: #fff;
+  margin-top: 10%;
   stroke-miterlimit: 10;
   stroke-width: 1.5%;
 }
@@ -139,9 +172,10 @@ body {
 
 #highScore {  
   position: absolute;
+  fill: none;
   left: 18%;
   width: 20%;
-  bottom: 30%;
+  bottom: 20%;
   stroke: #fff;
   stroke-miterlimit: 10;
   stroke-width: 1.5%;
@@ -152,22 +186,23 @@ body {
   stroke: brown;
 }
 
-#options {  
+#setting {  
   position: absolute;
+  fill: none;
   right: 18%;
   width: 20%;
-  bottom: 30%;
+  bottom: 20%;
   stroke: #fff;
   stroke-miterlimit: 10;
   stroke-width: 1.5%;
 }
 
-#options:hover {
+#setting:hover {
   cursor: pointer;
   stroke: brown;
 }
 
-#checkOut {
+.checkOut {
   position: absolute;
   top: 1%;
   right: 1%;
@@ -177,4 +212,16 @@ body {
   flex-direction: column;
   align-items: center;
   height: 85vmin;
+}
+
+/* #scoreTitle {
+} */
+
+.contain {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
 }

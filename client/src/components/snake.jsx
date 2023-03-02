@@ -13,6 +13,7 @@
   }
 
  export function drawSnake (gameBoard, snakeBody) {
+  console.log(snakeBody, 'from drawSnake')
     snakeBody.forEach((segment, index) => {
       putsnake(segment, gameBoard)
     })

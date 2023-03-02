@@ -12,9 +12,9 @@ let options1 = {
   options1.height = level + 4;
   let maze1 = new SquaresMaze(options1);
   const transfromed = maze1.printCells().replaceAll('#  #', '## #');
-  console.log(transfromed);
   return transfromed.split('\n');
 }
+
 function drawSegment (segment, className) {
   const gameBoard = document.getElementById('game-board');
   const element = document.createElement('div');
@@ -46,12 +46,15 @@ export function makeNewMaze (level) {
         drawSegment({x: i + 1, y: j + 1}, 'space');
       } else if (column === "$") {
         snakeBody = [{ x: i + 1, y: j + 1 }];
+        // console.log('from mazeGen')
         putsnake({ x: i + 1, y: j + 1 }, gameBoard);
       } else if (column === "^") {
+        // console.log('from mazeGen food')
         foodposition = { x: i + 1, y: j + 1 };
         drawFood(gameBoard, { x: i + 1, y: j + 1 });
       }
     }
   }
+  // console.log([position, foodposition, snakeBody])
   return [position, foodposition, snakeBody];
 }
