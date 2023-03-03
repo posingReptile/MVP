@@ -12,12 +12,21 @@ const SettingModal = ({ open, close }) => {
     <div>
       <Modal className="scoreModal" overlayClassName={{ base: "overlay-base", afterOpen: "overlay-after", beforeClose: "overlay-before" }}
 isOpen={open} onRequestClose={() => {close(false)}}>
-       <button className="checkOut" onClick={() => {close(false)}}>x</button>
-       <h1>setting</h1>
-        <input id="colorValue"></input>
-        <button onClick={() => {changeColor('--color', document.getElementById('colorValue').value)}}>change color</button>
-        <input id="wallValue"></input>
-        <button onClick={() => {changeColor('--wallColor',document.getElementById('wallValue').value)}}>change wall color</button>
+       <button className="checkOut" onClick={() => {close(false)}}>Exit</button>
+       <div className="contain">
+       <h1>Setting</h1>
+        <h2 id="snakeColorSetting">Change Snake Color</h2>
+        <div>
+          <input id="colorValue"></input>
+          <button id="colorButton" onClick={() => {changeColor('--color', document.getElementById('colorValue').value)}}>Enter</button>
+        </div>
+        <h2 id="wallColorSetting">Change wall color</h2>
+        <div>
+          <input id="wallValue"></input>
+          <button id="wallButton" onClick={() => {changeColor('--wallColor',document.getElementById('wallValue').value)}}>Enter</button>
+        </div>
+
+       </div>
         </Modal>
     </div>
   );

@@ -14,9 +14,23 @@ body {
 svg {
   fill: #fff;
 }
-
+button {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 10%;
+  color: #fff;
+}
+button:hover {
+  border: 2px solid brown;
+  color:brown;
+}
+h1 h2{
+  color:#fff;
+}
 h1 {
-  align-items: center;
+  color:#fff;
+  display: flex;
+  justify-content: center;
 }
 
 #app {
@@ -30,12 +44,10 @@ h1 {
 #title {
   color:rgb(63, 65, 66);
   margin: 0 auto;
-  margin-left: 42%;
 }
 
 #levelTitle {
   margin: 0 auto;
-  margin-left: 42%;
 }
 
 #menu {
@@ -55,16 +67,16 @@ h1 {
 }
 
 /* .ReactModal__Overlay.ReactModal__Overlay--after-open {
-  inset: auto !important;
-  border: 10px !important;
-  position: absolute !important;
-  top: 40% !important;
-  left: 47% !important;
+  outline: 0;
 } */
 
+.ReactModal__Content.ReactModal__Content--after-open.scoreModal {
+  outline: 0;
+}
 .overlay-base {
   position: absolute;
   border: transparent;
+  outline: 0;
   top: 50%;  
   left: 50%; 
   transform: translate(-50%, -50%);
@@ -84,8 +96,8 @@ h1 {
 .overlay-before {
   background-color: rgba(0, 0, 0, 0);
   opacity: 0;
-
 }
+
 #scoreTitle {
   margin: 0 auto;
   margin-top: 15%;
@@ -122,7 +134,7 @@ h1 {
   grid-template-rows: repeat(21, 1fr);
   grid-template-columns: repeat(21, 1fr);
   color:aquamarine;
-  grid-gap: 1vmin;
+  grid-gap: .5vmin;
   border-radius: 5px;
 
 }
@@ -135,7 +147,7 @@ h1 {
 }
 
 .food {
-  background-color: #ccc;
+  background-color: rgba(202, 202, 202, 0.8);
   width: 100%;
   /* border: .25vmin solid black; */
   border-radius: 10%;
@@ -145,14 +157,11 @@ h1 {
   background-color: var(--wallColor);
   border: .25vmin solid black;
   border-radius: 10%;
-  
 }
 
 .space {
-  background-color: #ccc;
   border-radius: 10%;
-  /* background-color: rgb(30, 29, 29); */
-  backface-visibility: 80%;
+  background-color: rgba(202, 202, 202, 0.8);
 }
 
 #play {
@@ -204,9 +213,23 @@ h1 {
 
 .checkOut {
   position: absolute;
-  top: 1%;
-  right: 1%;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10%;
+  height: 5%;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 10%;
+  color: #fff;
 }
+
+.checkOut:hover {
+  cursor: pointer;
+  color:brown;
+  border: 2px solid brown;
+}
+
 .score {
   display: flex;
   flex-direction: column;
@@ -224,4 +247,36 @@ h1 {
   justify-content: center;
   width: 80%;
   height: 100%;
+  outline: 0 !important;
+}
+#nextlevel {
+  margin-top: 3%;
+  width: 20%;
+  position: relative;
+  transform: translate(-100%, 0%);
+}
+
+#restart {
+  margin-top: 3%;
+  width: 20%;
+  position: relative;
+  transform: translate(-100%, 0%);
+}
+
+#settingTitle {
+  font-size: 30vh;
+}
+
+#snakeColorSetting {
+  color: var(--color);
+}
+
+#wallColorSetting {
+  color: var(--wallColor);
+}
+#wallButton {
+  position: unset;
+}
+#colorButton {
+  position: unset;
 }

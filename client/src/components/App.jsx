@@ -152,9 +152,9 @@ const App = () => {
         :<div>
           <h1 id="levelTitle">Level {level}</h1>
           <div id="game-board"></div>
-          <button onClick={() => {setLevel(1)}}>restart</button>
-          <button onClick={() => {setLevel(level + 1);}}>Next Level</button>
-          <Lost open={lostScreen} close={setLostScreen}/>
+          <button className="checkOut"  id="restart" onClick={() => {setLevel(1)}}>Restart</button>
+          <button className="checkOut" id="nextlevel" onClick={() => {setLevel(level + 1);}}>Next Level</button>
+          <Lost open={lostScreen} close={setLostScreen} level={level}/>
          </div>
       }
     </div>
