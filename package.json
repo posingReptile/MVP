@@ -4,7 +4,8 @@
   "description": "snake game with a maze",
   "main": "server/server.js",
   "scripts": {
-    "react:compile": "webpack --watch"
+    "compile": "webpack --watch",
+    "start": "nodemon server/index.js"
   },
   "author": "Anthony Chen",
   "license": "UNLICENSED",
@@ -20,6 +21,7 @@
     "react-icons": "^4.7.1",
     "react-modal": "^3.16.1",
     "react-particles": "^2.9.3",
+    "react-player": "^2.11.2",
     "react-tsparticles": "^2.9.3",
     "tsparticles": "^2.9.3"
   },

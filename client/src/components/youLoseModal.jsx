@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Axios from "axios";
 import Modal from 'react-modal';
+import ReactPlayer from "react-player"
 
 const Lost = ({ open, close, level }) => {
   const [scoreScreen, setScoreScreen] = useState(false);
@@ -24,6 +25,10 @@ isOpen={open} onRequestClose={() => {close(false)}}>
           <button id="wallButton" onClick={() => {sendScore(document.getElementById('nameScore').value)}}>Enter</button>
         </div>
       </div>
+      <h3 style={{textAlign: 'center'}}>Now a word from our sponsor</h3>
+      <ReactPlayer className="rickroll" style={{width: '540px', height: '360px'}}
+        url="https://www.youtube.com/watch?v=K_YivhIREM4"
+      />
        <button className="checkOut" onClick={() => {
         window.location.reload();
        }}>Restart</button>

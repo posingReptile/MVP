@@ -36,7 +36,6 @@ const App = () => {
 
   useEffect(() => {
     if (didMount.current) {
-      
       [position, foodposition, snakeBody] = makeNewMaze(level);
       document.addEventListener("keydown", arrowFunctions);
       deleteSnake();

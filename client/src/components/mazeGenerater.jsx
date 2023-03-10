@@ -31,6 +31,7 @@ export function makeNewMaze (level) {
   const gameBoard = document.getElementById('game-board');
   gameBoard.innerHTML= "";
   const newMaze = generateMazeString(level);
+  console.log(newMaze);
   const size = newMaze.length - 1;
   gameBoard.style.gridTemplateRows = `repeat(${size}, 1fr)`;
   gameBoard.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
